@@ -522,7 +522,7 @@ a {
 .all-members__chat-button::before {
   display: inline-block;
   content: "";
-  background-image: url(/images/chat.svg);
+  background-image: url(../images/chat.svg);
   width: 14px;
   height: 13px;
   background-size: 14px 13px;
@@ -543,7 +543,7 @@ a {
 .all-members__block-button::before {
   display: inline-block;
   content: "";
-  background-image: url(/images/block.svg);
+  background-image: url(../images/block.svg);
   width: 11px;
   height: 11px;
   background-size: 11px 11px;
