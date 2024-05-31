@@ -43,9 +43,9 @@
 							<label for="female">Female</label>
 						</div>
 					</fieldset>
-					<fieldset>
+					<fieldset class="fieldset-hobbies">
 
-						<legend>Your hobbies</legend>
+						<legend class="legend-hobbies">Your hobbies</legend>
 						<div class="toggle checkbox">
 
 							<input type="checkbox" name="music" value="music" id="music" checked="checked" />
@@ -67,9 +67,9 @@
 
 
 					<div class="slider-body">
-						<input type="range" min="0" max="1000" step="1" value="500" id="slider">
-							<div id="min-value">0</div>
-							<div id="max-value">1000</div>
+						<input type="range" min="0" max="1000" step="1" value="350" id="slider">
+							<div id="min-value">0m</div>
+							<div id="max-value">1000m</div>
 						<div id="selector">
 							<div class="selectBtn"></div>			
 							<div id="selectValue"></div>
@@ -93,7 +93,14 @@
 
 	</main>
 
-	<div class="footer"></div>
+	<div class="footer">
+
+
+		<div class="footer__container container">
+
+			<p>Privacy Policy Terms & Conditions Contact Us</p>
+		</div>
+	</div>
 
 
 
@@ -109,10 +116,21 @@
 		let selectValue = document.getElementById('selectValue')
 		let progressBar = document.getElementById('progressBar')
 
-		selectValue.innerHTML = slider.value
+
+		
+		selectValue.innerHTML = slider.value + 'm';
+
+		
+		
 
 		slider.oninput = function () {
-			selectValue.innerHTML = this.value
+			selectValue.innerHTML = this.value + 'm';
+			if (this.value > 700) {
+				selectValue.style.transform = 'translateX(-93%)';
+			} else {
+				selectValue.style.transform = 'translateX(0)';
+			}
+			
 			selector.style.left = this.value / 10 + '%'
 			progressBar.style.width = this.value / 10  + '%'
 			

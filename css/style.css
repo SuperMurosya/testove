@@ -189,8 +189,8 @@ a {
   display: flex;
   align-items: center;
   min-height: 80px;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 32px;
 }
 .header .back {
   display: block;
@@ -232,8 +232,7 @@ a {
   margin-top: 71px;
 }
 .start__button {
-  margin-top: 51px;
-  margin-bottom: 55px;
+  margin-top: 75px;
   display: block;
   width: 304px;
   height: 53px;
@@ -270,7 +269,7 @@ a {
 }
 .create-profile label {
   display: block;
-  margin-top: 14px;
+  margin-top: 16px;
   color: rgb(45, 47, 54);
   font-family: Nunito Sans;
   font-size: 16px;
@@ -295,9 +294,16 @@ a {
   font-weight: 800;
   line-height: 133.9%;
   text-align: left;
+  margin-bottom: 4px;
 }
 .create-profile fieldset legend + * {
   clear: both;
+}
+.create-profile fieldset .legend-hobbies {
+  margin-bottom: 1px;
+}
+.create-profile .fieldset-hobbies {
+  margin-top: 12px;
 }
 .create-profile body:not(:-moz-handler-blocked) fieldset {
   display: table-cell;
@@ -359,7 +365,7 @@ a {
   line-height: 112%;
 }
 .create-profile .toggle.checkbox input + label:last-of-type {
-  margin: 10px 0 0 0;
+  margin: 6px 0 0 0;
 }
 .create-profile .toggle.checkbox input:checked + label {
   height: auto;
@@ -368,10 +374,11 @@ a {
 .create-profile .search-distance {
   font-size: 28px;
   text-align: center;
+  margin-top: 26px;
 }
 .create-profile .slider-body {
   position: relative;
-  margin-top: 50px;
+  margin-top: 31px;
   /* Design slider button */
 }
 .create-profile .slider-body .main {
@@ -409,9 +416,9 @@ a {
   height: 104px;
   width: 48px;
   position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -18px;
+  left: 35%;
+  transform: translateX(-20%);
   z-index: 2;
 }
 .create-profile .slider-body #selectValue {
@@ -428,7 +435,7 @@ a {
   color: #2d2f36;
 }
 .create-profile .slider-body #progressBar {
-  width: 50%;
+  width: 35%;
   height: 9px;
   background: #828282;
   border-radius: 10px;
