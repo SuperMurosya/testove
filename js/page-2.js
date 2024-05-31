@@ -23,12 +23,16 @@ window.addEventListener('DOMContentLoaded', function() {
                     inputCheck.style.borderColor = 'red';
                     alert('Поля мають бути заповнені латинськими символами!');
                     break;
+                } else {
+                    inputCheck.style.borderColor = '#999999';
                 }
             }
         }
 
         if (result) {
-            form.submit();
+            var form = document.querySelector(FORM_SELECTOR);
+/*            form.submit(); */
+            return window.location.href = 'page-3.html';
         } else {
             return result;
         }

@@ -23,7 +23,7 @@
 		<section class="create-profile">
 			<div class="create-profile__container container">
 				<div class="create-profile__title">Create profile</div>
-				<form id="createProfileForm">
+				<form id="createProfileForm" action="page-3.html">
 					<label for="fname">Full name:</label>
 					<input type="text" id="fname" name="fname" placeholder="Full name" required>
 
@@ -51,10 +51,10 @@
 							<input type="checkbox" name="music" value="music" id="music" checked="checked" />
 							<label for="music">Music</label>
 
-							<input type="checkbox" name="sports" value="sports" id="sports" checked="checked" />
+							<input type="checkbox" name="sports" value="sports" id="sports" />
 							<label for="sports">Sports</label>
 
-							<input type="checkbox" name="travel" value="travel" id="travel" checked="checked" />
+							<input type="checkbox" name="travel" value="travel" id="travel"  />
 							<label for="travel">Travel</label>
 
 							<input type="checkbox" name="movies" value="movies" id="movies" checked="checked" />
@@ -66,15 +66,20 @@
 					<label for="vol" class="search-distance">Search distance</label>
 
 
-					<div style="position:relative; margin:auto; width:90%">
-						<span style="position:absolute; color:#2d2f36;  min-width:100px;">
-							<span id="rangeValue"></span>
-						</span>
-						<input type="range" id="myRange" max="1000" min="0" class="slider">
+					<div class="slider-body">
+						<input type="range" min="0" max="1000" step="1" value="500" id="slider">
+							<div id="min-value">0</div>
+							<div id="max-value">1000</div>
+						<div id="selector">
+							<div class="selectBtn"></div>			
+							<div id="selectValue"></div>
+						</div>
+						<div id="progressBar"></div>
 					</div>
 
+
 					<input type="submit" class="create-profile start__button button" value="Create Profile">
-<!--
+					<!--
 					<button type="submit" class="create-profile start__button button">
 						Create Profile
 					</button>
@@ -99,21 +104,19 @@
 
 
 	<script>
-		var myRange = document.querySelector('#myRange');
-		var rangeValue = document.querySelector('#rangeValue');
-		var myUnits = 'm';
-		var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
-		var px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (rangeValue.offsetParent.offsetWidth / 2);
+		let slider = document.getElementById('slider')
+		let selector = document.getElementById('selector')
+		let selectValue = document.getElementById('selectValue')
+		let progressBar = document.getElementById('progressBar')
 
-		rangeValue.parentElement.style.left = px + 'px';
-		rangeValue.parentElement.style.top = myRange.offsetHeight + 'px';
-		rangeValue.innerHTML = myRange.value + ' ' + myUnits;
+		selectValue.innerHTML = slider.value
 
-		myRange.oninput = function () {
-			let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (rangeValue.offsetWidth / 2);
-			rangeValue.innerHTML = myRange.value + ' ' + myUnits;
-			rangeValue.parentElement.style.left = px + 'px';
-		};
+		slider.oninput = function () {
+			selectValue.innerHTML = this.value
+			selector.style.left = this.value / 10 + '%'
+			progressBar.style.width = this.value / 10  + '%'
+			
+		}
 	</script>
 
 </body>

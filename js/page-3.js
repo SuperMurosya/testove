@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var currentMemberItem = null;
 
     initializeButtons();
+    checkBlackUserList();
 
     /**
      * Ініціалізація кнопок
@@ -24,6 +25,9 @@ window.addEventListener('DOMContentLoaded', function() {
             buttonBlockPopup.addEventListener('click', function(event) {
                 var currentMemberItem = getCurrentMemberItem();
                 if (currentMemberItem != null) {
+                    if (getUserId(currentMemberItem)) {
+                        addUserBlackList(getUserId(currentMemberItem));
+                    }
                     currentMemberItem.outerHTML = '';
                 }
                 var buttonClosePopup = document.querySelector(BUTTON_CLOSE_POPUP_CLASS);
@@ -32,6 +36,34 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+    }
+
+    /**
+     * Перевіряє заблокованих користувачів
+     */
+    function checkBlackUserList() {
+        var i;
+        var userBlackList = getUserBlackList();
+        var userList = document.querySelectorAll('.all-members__item');
+
+        for (i = 0; i < userList.length; i++) {
+            if (userBlackList.indexOf(getUserId(userList[i])) != -1) {
+                userList[i].outerHTML = '';
+            }
+        }
+    }
+
+    /**
+     * Отримує ID користувача
+     * @param item
+     * @returns {*}
+     */
+    function getUserId(item) {
+        var result = null;
+        if (item != null && item.hasAttribute('userId')) {
+            result = parseInt(item.getAttribute('userId'));
+        }
+        return result;
     }
 
     /**
