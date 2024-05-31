@@ -14,7 +14,7 @@
 <body>
 	<div class="header">
 		<div class="header__container container">
-			<a class="back"><img src="images/back.svg" alt="arrow-left"></a>
+			<a href="index.html" class="back"><img src="images/back.svg" alt="arrow-left"></a>
 			<img src="images/logo.svg" alt="Logo" class="header__logo log">
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 		<section class="create-profile">
 			<div class="create-profile__container container">
 				<div class="create-profile__title">Create profile</div>
-				<form>
+				<form id="createProfileForm">
 					<label for="fname">Full name:</label>
 					<input type="text" id="fname" name="fname" placeholder="Full name" required>
 
@@ -73,6 +73,12 @@
 						<input type="range" id="myRange" max="1000" min="0" class="slider">
 					</div>
 
+					<input type="submit" class="create-profile start__button button" value="Create Profile">
+<!--
+					<button type="submit" class="create-profile start__button button">
+						Create Profile
+					</button>
+-->
 				</form>
 			</div>
 
@@ -89,12 +95,10 @@
 	<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
 	<script src="js/owlcarousel/owl.carousel.min.js"></script>
 	<script src="js/run_owlcarousel.js"></script>
+	<script src="js/page-2.js"></script>
 
 
 	<script>
-
-
-
 		var myRange = document.querySelector('#myRange');
 		var rangeValue = document.querySelector('#rangeValue');
 		var myUnits = 'm';

@@ -4,7 +4,7 @@ class KamPopUp {
 	_closeButton = '_close';
 	_classWrapperEl = null;
 	_classContentEl = null;
-	_popupOPen = "_popup-open"
+	_popupOPen = "_popup-open";
 
 
 	constructor(iconButton, classWrapperEl, classContentEl, closeButton) {
@@ -102,7 +102,7 @@ class KamPopUp {
 
 const firstPopup = new KamPopUp('all-members__block-button', 'popup-1', 'popup-1__content', 'popup-1__close');
 
-
+const firstPopup2 = new KamPopUp('member__block-button', 'popup-1', 'popup-1__content', 'popup-1__close');
 
 
 // Обовязкові стилі для css

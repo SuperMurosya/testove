@@ -1,29 +1,14 @@
-$(document).ready(function(){
-	$(".owl-carousel").owlCarousel({
-		autoplay: true,
+$(document).ready(function () {
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 10,
 		nav: true,
-		navContainer: ".portfolio__controls",
-		margin: 56,
-		navElement: "div",	
-		navText : [
-			'<button type="button" class="portfolio__arrow portfolio__arrow_left icon-slider-arrow-l"></button>',
-			'<button type="button" class="portfolio__arrow portfolio__arrow_right icon-slider-arrow-r"></button>'
-        ],
+		dots: false,
 		responsive: {
-            0:{
-                items:1,
-				stagePadding: 30, /*виглядування наступного слайду*/ 
-				margin: 10,
+			0: {
+				items: 1
+			},
 
-            },
-            560:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-        },
-	}
-
-	);
-  });
+		}
+	});
+});
