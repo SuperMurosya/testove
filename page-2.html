@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header__container container">
+			<a class="back"><img src="images/back.svg" alt="arrow-left"></a>
+			<img src="images/logo.svg" alt="Logo" class="header__logo log">
+		</div>
+	</div>
+	<main>
+
+		<section class="create-profile">
+			<div class="create-profile__container container">
+				<div class="create-profile__title">Create profile</div>
+				<form>
+					<label for="fname">Full name:</label>
+					<input type="text" id="fname" name="fname" placeholder="Full name" required>
+
+
+					<label for="yname">Your name:</label>
+					<input type="text" id="ylname" name="yname" placeholder="Name" required>
+
+					<label for="lname">Your country:</label>
+					<input type="text" id="lname" name="lname" placeholder="Country" required>
+
+					<fieldset>
+						<legend>Your gender</legend>
+						<div class="toggle">
+							<input type="radio" name="gender" value="male" id="male" checked="checked" />
+							<label for="male">Male</label>
+							<input type="radio" name="gender" value="female" id="female" />
+							<label for="female">Female</label>
+						</div>
+					</fieldset>
+					<fieldset>
+
+						<legend>Your hobbies</legend>
+						<div class="toggle checkbox">
+
+							<input type="checkbox" name="music" value="music" id="music" checked="checked" />
+							<label for="music">Music</label>
+
+							<input type="checkbox" name="sports" value="sports" id="sports" checked="checked" />
+							<label for="sports">Sports</label>
+
+							<input type="checkbox" name="travel" value="travel" id="travel" checked="checked" />
+							<label for="travel">Travel</label>
+
+							<input type="checkbox" name="movies" value="movies" id="movies" checked="checked" />
+							<label for="movies">Movies</label>
+
+
+						</div>
+					</fieldset>
+					<label for="vol" class="search-distance">Search distance</label>
+
+
+					<div style="position:relative; margin:auto; width:90%">
+						<span style="position:absolute; color:#2d2f36;  min-width:100px;">
+							<span id="rangeValue"></span>
+						</span>
+						<input type="range" id="myRange" max="1000" min="0" class="slider">
+					</div>
+
+				</form>
+			</div>
+
+
+		</section>
+
+
+	</main>
+
+	<div class="footer"></div>
+
+
+
+	<script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<script src="js/owlcarousel/owl.carousel.min.js"></script>
+	<script src="js/run_owlcarousel.js"></script>
+
+
+	<script>
+
+
+
+		var myRange = document.querySelector('#myRange');
+		var rangeValue = document.querySelector('#rangeValue');
+		var myUnits = 'm';
+		var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
+		var px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (rangeValue.offsetParent.offsetWidth / 2);
+
+		rangeValue.parentElement.style.left = px + 'px';
+		rangeValue.parentElement.style.top = myRange.offsetHeight + 'px';
+		rangeValue.innerHTML = myRange.value + ' ' + myUnits;
+
+		myRange.oninput = function () {
+			let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (rangeValue.offsetWidth / 2);
+			rangeValue.innerHTML = myRange.value + ' ' + myUnits;
+			rangeValue.parentElement.style.left = px + 'px';
+		};
+	</script>
+
+</body>
+
+</html>
