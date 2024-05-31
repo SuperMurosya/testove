@@ -29,7 +29,7 @@
 
 
 					<label for="yname">Your name:</label>
-					<input type="text" id="ylname" name="yname" placeholder="Name" required>
+					<input type="text" id="yname" name="yname" placeholder="Name" required>
 
 					<label for="lname">Your country:</label>
 					<input type="text" id="lname" name="lname" placeholder="Country" required>
@@ -37,9 +37,9 @@
 					<fieldset>
 						<legend>Your gender</legend>
 						<div class="toggle">
-							<input type="radio" name="gender" value="male" id="male" checked="checked" />
+							<input type="radio" name="gender" value="male" id="male" checked="checked">
 							<label for="male">Male</label>
-							<input type="radio" name="gender" value="female" id="female" />
+							<input type="radio" name="gender" value="female" id="female">
 							<label for="female">Female</label>
 						</div>
 					</fieldset>
@@ -48,30 +48,29 @@
 						<legend class="legend-hobbies">Your hobbies</legend>
 						<div class="toggle checkbox">
 
-							<input type="checkbox" name="music" value="music" id="music" checked="checked" />
+							<input type="checkbox" name="music" value="music" id="music" checked="checked">
 							<label for="music">Music</label>
 
-							<input type="checkbox" name="sports" value="sports" id="sports" />
+							<input type="checkbox" name="sports" value="sports" id="sports">
 							<label for="sports">Sports</label>
 
-							<input type="checkbox" name="travel" value="travel" id="travel"  />
+							<input type="checkbox" name="travel" value="travel" id="travel">
 							<label for="travel">Travel</label>
 
-							<input type="checkbox" name="movies" value="movies" id="movies" checked="checked" />
+							<input type="checkbox" name="movies" value="movies" id="movies" checked="checked">
 							<label for="movies">Movies</label>
-
 
 						</div>
 					</fieldset>
-					<label for="vol" class="search-distance">Search distance</label>
+					<label for="slider" class="search-distance">Search distance</label>
 
 
 					<div class="slider-body">
 						<input type="range" min="0" max="1000" step="1" value="350" id="slider">
-							<div id="min-value">0m</div>
-							<div id="max-value">1000m</div>
+						<div id="min-value">0m</div>
+						<div id="max-value">1000m</div>
 						<div id="selector">
-							<div class="selectBtn"></div>			
+							<div class="selectBtn"></div>
 							<div id="selectValue"></div>
 						</div>
 						<div id="progressBar"></div>
@@ -79,11 +78,8 @@
 
 
 					<input type="submit" class="create-profile start__button button" value="Create Profile">
-					<!--
-					<button type="submit" class="create-profile start__button button">
-						Create Profile
-					</button>
--->
+
+
 				</form>
 			</div>
 
@@ -117,11 +113,11 @@
 		let progressBar = document.getElementById('progressBar')
 
 
-		
+
 		selectValue.innerHTML = slider.value + 'm';
 
-		
-		
+
+
 
 		slider.oninput = function () {
 			selectValue.innerHTML = this.value + 'm';
@@ -130,10 +126,10 @@
 			} else {
 				selectValue.style.transform = 'translateX(0)';
 			}
-			
+
 			selector.style.left = this.value / 10 + '%'
-			progressBar.style.width = this.value / 10  + '%'
-			
+			progressBar.style.width = this.value / 10 + '%'
+
 		}
 	</script>
 

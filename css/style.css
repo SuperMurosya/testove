@@ -226,13 +226,22 @@ a {
   height: 354px;
 }
 .start__logo {
-  margin-top: 75px;
+  margin-top: 79px;
+}
+.start__logo img {
+  width: 180px;
+  height: 50px;
 }
 .start__desc {
-  margin-top: 71px;
+  margin-top: 47px;
+  font-size: 18px;
+  line-height: 139%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #2d2f36;
 }
 .start__button {
-  margin-top: 75px;
+  margin-top: 52px;
   display: block;
   width: 304px;
   height: 53px;
@@ -533,9 +542,9 @@ a {
   width: 72px;
   height: 30px;
   font-size: 13px;
-  line-height: 181%;
+  line-height: 30px;
   text-align: center;
-  color: #2d2f36;
+  color: #E5218F;
   border-radius: 100px;
   background-color: transparent;
   border: 2px solid #e5218f;
@@ -547,7 +556,7 @@ a {
   width: 11px;
   height: 11px;
   background-size: 11px 11px;
-  margin: 0 5px -2px 0;
+  margin: 0 5px -0.5px 0;
 }
 
 .member__item {
