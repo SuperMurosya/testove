@@ -23,10 +23,10 @@ window.addEventListener('DOMContentLoaded', function () {
                     inputCheck.style.borderColor = 'red';
 
 
-                  //  alert('Only Latin characters');
+                   alert('Only Latin characters');
 
-                    setTimeout(inputCheck.outerHTML = inputCheck.outerHTML + "<span class='form-error'>Only Latin characters</span>", 5000);
-                    console.log(inputCheck.innerHTML = inputCheck.innerHTML + "<span>Only Latin characters</span>");
+                //  inputCheck.outerHTML = inputCheck.outerHTML + "<span class='form-error'>Only Latin characters</span>";
+                    // console.log(inputCheck.innerHTML = inputCheck.innerHTML + "<span>Only Latin characters</span>");
                     
                     break;
                 } else {
