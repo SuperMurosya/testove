@@ -24,22 +24,28 @@
 			<div class="create-profile__container container">
 				<div class="create-profile__title">Create profile</div>
 				<form id="createProfileForm" action="page-3.html">
-					<label for="fname">Full name:</label>
-					<input type="text" id="fname" name="fname" placeholder="Full name" required>
+					<div class="input-text">
+						<label for="fname">Full name:</label>
+						<input type="text" id="fname" name="fname" placeholder="Full name" required>
+					</div>
 
 
-					<label for="yname">Your name:</label>
-					<input type="text" id="yname" name="yname" placeholder="Name" required>
+					<div class="input-text">
 
-					<label for="lname">Your country:</label>
-					<input type="text" id="lname" name="lname" placeholder="Country" required>
+						<label for="yname">Your name:</label>
+						<input type="text" id="yname" name="yname" placeholder="Name" required>
+					</div>
+					<div class="input-text">
 
+						<label for="lname">Your country:</label>
+						<input type="text" id="lname" name="lname" placeholder="Country" required>
+					</div>
 					<fieldset>
 						<legend>Your gender</legend>
 						<div class="toggle">
-							<input type="radio" name="gender" value="male" id="male" checked="checked">
+							<input type="radio" name="gender" value="male" id="male" required>
 							<label for="male">Male</label>
-							<input type="radio" name="gender" value="female" id="female">
+							<input type="radio" name="gender" value="female" id="female" required>
 							<label for="female">Female</label>
 						</div>
 					</fieldset>
@@ -57,7 +63,7 @@
 							<input type="checkbox" name="travel" value="travel" id="travel">
 							<label for="travel">Travel</label>
 
-							<input type="checkbox" name="movies" value="movies" id="movies" checked="checked">
+							<input type="checkbox" name="movies" value="movies" id="movies">
 							<label for="movies">Movies</label>
 
 						</div>

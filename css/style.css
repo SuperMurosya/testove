@@ -73,6 +73,7 @@ body {
   min-width: 320px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
+  background-color: #f2ffdc;
 }
 
 button,
@@ -118,6 +119,7 @@ a {
   visibility: hidden;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 .popup-1__close {
   position: absolute;
@@ -242,6 +244,7 @@ a {
 }
 .start__button {
   margin-top: 52px;
+  margin-bottom: 56px;
   display: block;
   width: 304px;
   height: 53px;
@@ -249,7 +252,6 @@ a {
 }
 
 .create-profile {
-  /* VARS */
   /* MIXINS */
   /* STYLE THE HTML ELEMENTS (INCLUDES RESETS FOR THE DEFAULT FIELDSET AND LEGEND STYLES) */
   /* TOGGLE STYLING */
@@ -285,6 +287,17 @@ a {
   font-weight: 800;
   line-height: 133.9%;
   text-align: left;
+}
+.create-profile .input-text {
+  position: relative;
+}
+.create-profile .form-error {
+  font-size: 11px;
+  color: red;
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  font-weight: 400;
 }
 .create-profile body,
 .create-profile html {

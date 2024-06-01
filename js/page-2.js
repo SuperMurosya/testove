@@ -1,7 +1,7 @@
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
 
     const FORM_SELECTOR = '#createProfileForm';
-    const INPUT_CHECK_LIST = ['fname', 'ylname', 'lname'];
+    const INPUT_CHECK_LIST = ['fname', 'yname', 'lname'];
     const BUTTON_CREATE_PROFILE_CLASS = '.create-profile.start__button.button';
 
     initializeFormSubmit();
@@ -21,7 +21,13 @@ window.addEventListener('DOMContentLoaded', function() {
                 if (!(/^([a-zA-Z]*)$/.test(inputCheck.value))) {
                     result = false;
                     inputCheck.style.borderColor = 'red';
-                    alert('Поля мають бути заповнені латинськими символами!');
+
+
+                  //  alert('Only Latin characters');
+
+                    setTimeout(inputCheck.outerHTML = inputCheck.outerHTML + "<span class='form-error'>Only Latin characters</span>", 5000);
+                    console.log(inputCheck.innerHTML = inputCheck.innerHTML + "<span>Only Latin characters</span>");
+                    
                     break;
                 } else {
                     inputCheck.style.borderColor = '#999999';
@@ -31,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         if (result) {
             var form = document.querySelector(FORM_SELECTOR);
-/*            form.submit(); */
+            /*            form.submit(); */
             return window.location.href = 'page-3.html';
         } else {
             return result;
